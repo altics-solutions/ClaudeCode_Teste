@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /d/ClaudeCode_Teste && git add -A && git diff --cached --quiet || (git commit -m 'Auto-update: sync changes' && git push) 2>/dev/null || true",
+            "statusMessage": "Sincronizando com GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
